@@ -2,7 +2,7 @@ package q3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import q1.NotificationService;
+import q3.NotificationService;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -26,7 +26,7 @@ class AppointmentManagerTest {
         AppointmentManager manager = new AppointmentManager(smsService);
 
         // Act
-        manager.notifyPatient("Your appointment is tomorrow.");
+        manager.notify("Your appointment is tomorrow.");
 
         // Assert
         String output = outputStream.toString().trim();
@@ -66,7 +66,7 @@ class AppointmentManagerTest {
 
         // Act
         smsManager.notifyPatient("SMS Test");
-        emailManager.notifyPatient("Email Test");
+        emailManager.notify("Email Test");
 
         String output = outputStream.toString().trim();
 
