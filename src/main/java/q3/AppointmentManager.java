@@ -3,10 +3,17 @@ package q3;
 //Depend on NotificationService abstraction
 //Use constructor injection
 public class AppointmentManager {
-    private SMSService smsService = new SMSService();
 
-    public void notifyPatient(String message) {
-        smsService.sendSMS(message);
+    public NotificationService service;
+    public AppointmentManager manager;
+
+    public AppointmentManager(NotificationService service) {
+
+    }
+
+
+    public void notifyPatient(NotificationService service, String message) {
+        service.send(message);
     }
 }
 

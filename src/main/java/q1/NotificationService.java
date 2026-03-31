@@ -11,7 +11,10 @@ public class NotificationService {
     public static NotificationService getInstance() {
         // TODO:
         // Ensure only one instance is created
-       return null;
+        if (instance == null){
+            instance = new NotificationService();
+        }
+       return instance;
     }
 
     public void sendNotification(Notifier notifier, String message) {

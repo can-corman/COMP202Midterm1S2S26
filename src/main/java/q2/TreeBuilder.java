@@ -13,6 +13,8 @@ class TreeBuilder {
 
     public TreeBuilder setPosition(int x, int y) {
         // TODO: Set x and y on the internal 'tree' object
+        tree.setX(x);
+        tree.setY(y);
         return this;
     }
 
@@ -24,11 +26,12 @@ class TreeBuilder {
 
     public TreeBuilder setHealth(int health) {
         // TODO: Set health on the internal 'tree' object
+        tree.setHealth(health);
         return this;
     }
 
     public Tree build() {
         // TODO: Capture the current tree, reset the builder, and return the tree
-        return null;
+        return tree;
     }
 }

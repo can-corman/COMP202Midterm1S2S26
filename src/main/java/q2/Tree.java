@@ -19,5 +19,6 @@ class Tree {
     public void render() {
         // TODO: Print the tree's unique data (x, y, health)
         // AND the shared data (species) from the model reference.
+        System.out.println(getX() +" "+ getY() +" "+ getHealth() + " " + getModel());
     }
 }

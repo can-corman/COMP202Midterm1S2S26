@@ -10,6 +10,9 @@ public class LoggingDecorator extends NotifierDecorator {
     public void send(String message) {
         // TODO:
         // 1. Log the message BEFORE sending
+        System.out.println("LOG: ");
+
         // 2. Call parent behavior
+        super.send(message);
     }
 }

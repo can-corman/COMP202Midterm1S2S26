@@ -11,5 +11,6 @@ public abstract class NotifierDecorator implements Notifier {
     @Override
     public void send(String message) {
         // TODO: Delegate the call to the wrapped object
+        notifier.send(message);
     }
 }

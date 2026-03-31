@@ -10,6 +10,9 @@ public class SMSDecorator extends NotifierDecorator {
     public void send(String message) {
         // TODO:
         // 1. Call parent behavior
+        super.send(message);
         // 2. Add SMS sending functionality
+        System.out.println("Sending SMS: ");
+
     }
 }
